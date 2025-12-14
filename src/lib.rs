@@ -29,8 +29,8 @@ impl AABB {
     }
 
     pub fn contains(&self, point: DVec2) -> bool {
-        self.mins.x <= point.x && self.maxs.x >= point.x &&
-        self.mins.y <= point.y && self.maxs.y >= point.y
+        self.mins.cmple(point).all() &&
+        self.maxs.cmpge(point).all()
     }
 
     pub fn half_extents(&self) -> DVec2 {
