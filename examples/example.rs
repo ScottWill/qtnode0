@@ -11,7 +11,7 @@ fn main() {
     const G: f64 = 6.6743e-2;
     let min = -1.0_f64;
     let max =  1.0_f64;
-    let meta_size = 10_000;
+    let meta_size = 100_000;
 
     let bounds = AABB::new(min, max);
     let mut metas = Vec::with_capacity(meta_size);
